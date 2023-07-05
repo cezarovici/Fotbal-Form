@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Football Tournament Information</title>
+</head>
+<body>
+  <h1>Football Tournament Information</h1>
+  <form id="tournamentForm">
+    <label for="stageNumber">Stage Number:</label>
+    <input type="number" id="stageNumber" name="stageNumber" required><br>
+
+     <br><br>
+
+     <h1>Players</h1>
+     <div>
+          <label for="selectPlayer">Select Player:</label>
+          <select id="selectPlayer"></select>
+    </div>
+
+    <br><br>
+
+    <table>
+      <tr>
+        <th>Team1</th>
+        <th>Team2</th>
+        <th>Team3</th>
+        <th>Team4</th>
+      </tr>
+      <tr> 
+          <td><input type="text" name="t1j1" id="myInput"></td>
+          <td><input type="text" name="t2j1" id="myInput"></td>
+          <td><input type="text" name="t3j1" id="myInput"></td>
+          <td><input type="text" name="t4j1" id="myInput"></td>
+      </tr>
+      <tr> 
+          <td><input type="text" name="t1j2"></td>
+          <td><input type="text" name="t2j2"></td>
+          <td><input type="text" name="t3j2"></td>
+          <td><input type="text" name="t4j2"></td>
+      </tr>
+      <tr> 
+          <td><input type="text" name="t1j3"></td>
+          <td><input type="text" name="t2j3"></td>
+          <td><input type="text" name="t3j3"></td>
+          <td><input type="text" name="t4j3"></td>
+      </tr>
+      <tr> 
+          <td><input type="text" name="t1j4"></td>
+          <td><input type="text" name="t2j4"></td>
+          <td><input type="text" name="t3j4"></td>
+          <td><input type="text" name="t4j4"></td>
+      </tr>
+      <tr> 
+          <td><input type="text" name="t1j5"></td>
+          <td><input type="text" name="t2j5"></td>
+          <td><input type="text" name="t3j5"></td>
+          <td><input type="text" name="t4j5"></td>
+      </tr>
+      <tr> 
+          <td><input type="text" name="t1j6"></td>
+          <td><input type="text" name="t2j6"></td>
+          <td><input type="text" name="t3j6"></td>
+          <td><input type="text" name="t4j6"><p id="suggestionList"></p></p>
+      </tr>
+  </table>
+
+  <br><br>  
+  <h1>Search with Suggestions Example</h1>
+  <input type="text" id="searchInput" placeholder="Search">
+  <ul id="suggestionList"></ul>
+  <script src="script.js"></script>
+
+
+  <br><br>
+  <input type="submit" value="Submit">
+  </form>
+
+  <script src="index.js"></script>
+</body>
+</html>
