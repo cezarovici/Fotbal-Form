@@ -12,10 +12,12 @@
      <br><br>
 
      <h1>Players</h1>
-     <div>
-          <label for="selectPlayer">Select Player:</label>
-          <select id="selectPlayer"></select>
+    <form autocomplete="on" action="/action_page.php">
+    <div class="autocomplete" style="width:300px;">
+      <input id="selectPlayer" type="text" name="myCountry" placeholder="Country">
     </div>
+    
+  <input type="submit">
 
     <br><br>
 
@@ -27,10 +29,10 @@
         <th>Team4</th>
       </tr>
       <tr> 
-          <td><input type="text" name="t1j1" id="myInput"></td>
-          <td><input type="text" name="t2j1" id="myInput"></td>
-          <td><input type="text" name="t3j1" id="myInput"></td>
-          <td><input type="text" name="t4j1" id="myInput"></td>
+          <td><input type="text" name="t1j1" class="myInput"></td>
+          <td><input type="text" name="t2j1" class="myInput"></td>
+          <td><input type="text" name="t3j1" class="myInput"></td>
+          <td><input type="text" name="t4j1" class="myInput"></td>
       </tr>
       <tr> 
           <td><input type="text" name="t1j2"></td>
@@ -60,7 +62,7 @@
           <td><input type="text" name="t1j6"></td>
           <td><input type="text" name="t2j6"></td>
           <td><input type="text" name="t3j6"></td>
-          <td><input type="text" name="t4j6"><p id="suggestionList"></p></p>
+          <td><input type="text" name="t4j6" id="myInput"><p id="suggestionList"></p></p>
       </tr>
   </table>
 
@@ -68,13 +70,10 @@
   <h1>Search with Suggestions Example</h1>
   <input type="text" id="searchInput" placeholder="Search">
   <ul id="suggestionList"></ul>
-  <script src="script.js"></script>
-
-
   <br><br>
   <input type="submit" value="Submit">
   </form>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
