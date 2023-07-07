@@ -1,4 +1,3 @@
-// script.js
 const players = []
 
 async function fetchData() {
@@ -136,5 +135,36 @@ async function initializeAutocomplete() {
   const input = document.getElementById("selectPlayer");
   autocomplete(input, data);
 }
+
+const table = document.getElementById("myTable");
+let currentColumn = 0;
+let currentRow = 1;
+
+
+const team = new Map()
+
+function populateTable(value) {
+  const cell = table.rows[currentRow].cells[currentColumn];
+  cell.textContent = value;
+
+  
+  incrementPosition();
+}
+
+
+function incrementPosition() {
+  currentRow++;
+  if (currentRow === 7) {
+    currentRow = 1;
+    currentColumn++;
+  }
+}
+
+const submitButton = document.getElementById("insertButton");
+submitButton.addEventListener("click", function() {
+  const input = document.getElementById("selectPlayer");
+  const selectedValue = input.value;
+  populateTable(selectedValue);
+});
 
 initializeAutocomplete()

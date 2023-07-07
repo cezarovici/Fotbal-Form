@@ -2,6 +2,87 @@
 <html>
 <head>
   <title>Football Tournament Information</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Arial;  
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+table{
+  width: 90%;
+}
+
+td {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  display: center;
+  color: black;
+  width: 25%;
+  height: 40px;
+}
+
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+td[id="grey"]{
+  background-color: lightgrey;
+}
+
+td[id="blue"]{
+  background-color: DodgerBlue;
+}
+
+td[id="orange"]{
+  background-color: orange;
+}
+
+td[id="green"]{
+  background-color: lightgreen;
+}
+
+</style>
+
+
 </head>
 <body>
   <h1>Football Tournament Information</h1>
@@ -12,16 +93,18 @@
      <br><br>
 
      <h1>Players</h1>
-    <form autocomplete="on" action="/action_page.php">
     <div class="autocomplete" style="width:300px;">
-      <input id="selectPlayer" type="text" name="myCountry" placeholder="Country">
+      <input id="selectPlayer" type="text" name="myCountry" placeholder="Player Name">
     </div>
-    
-  <input type="submit">
+  </form>
+
+  <button id="insertButton">Insert Value</button>
 
     <br><br>
 
-    <table>
+
+    <br><br>
+    <table id="myTable">
       <tr>
         <th>Team1</th>
         <th>Team2</th>
@@ -29,50 +112,45 @@
         <th>Team4</th>
       </tr>
       <tr> 
-          <td><input type="text" name="t1j1" class="myInput"></td>
-          <td><input type="text" name="t2j1" class="myInput"></td>
-          <td><input type="text" name="t3j1" class="myInput"></td>
-          <td><input type="text" name="t4j1" class="myInput"></td>
+          <td id="grey" name="t1j1"></td>
+          <td id="orange" name="t2j1"></td>
+          <td id="green" name="t3j1"></td>
+          <td id="blue" name="t4j1"></td>
       </tr>
       <tr> 
-          <td><input type="text" name="t1j2"></td>
-          <td><input type="text" name="t2j2"></td>
-          <td><input type="text" name="t3j2"></td>
-          <td><input type="text" name="t4j2"></td>
+          <td id="grey" name="t1j1"></td>
+          <td id="orange" name="t2j1"></td>
+          <td id="green" name="t3j1"></td>
+          <td id="blue" name="t4j1"></td>
       </tr>
       <tr> 
-          <td><input type="text" name="t1j3"></td>
-          <td><input type="text" name="t2j3"></td>
-          <td><input type="text" name="t3j3"></td>
-          <td><input type="text" name="t4j3"></td>
+          <td id="grey" name="t1j1"></td>
+          <td id="orange" name="t2j1"></td>
+          <td id="green" name="t3j1"></td>
+          <td id="blue" name="t4j1"></td>
       </tr>
       <tr> 
-          <td><input type="text" name="t1j4"></td>
-          <td><input type="text" name="t2j4"></td>
-          <td><input type="text" name="t3j4"></td>
-          <td><input type="text" name="t4j4"></td>
+          <td id="grey" name="t1j1"></td>
+          <td id="orange" name="t2j1"></td>
+          <td id="green" name="t3j1"></td>
+          <td id="blue" name="t4j1"></td>
       </tr>
       <tr> 
-          <td><input type="text" name="t1j5"></td>
-          <td><input type="text" name="t2j5"></td>
-          <td><input type="text" name="t3j5"></td>
-          <td><input type="text" name="t4j5"></td>
+          <td id="grey" name="t1j1"></td>
+          <td id="orange" name="t2j1"></td>
+          <td id="green" name="t3j1"></td>
+          <td id="blue" name="t4j1"></td>
       </tr>
       <tr> 
-          <td><input type="text" name="t1j6"></td>
-          <td><input type="text" name="t2j6"></td>
-          <td><input type="text" name="t3j6"></td>
-          <td><input type="text" name="t4j6" id="myInput"><p id="suggestionList"></p></p>
+          <td id="grey" name="t1j1"></td>
+          <td id="orange" name="t2j1"></td>
+          <td id="green" name="t3j1"></td>
+          <td id="blue" name="t4j1"></td>
       </tr>
   </table>
 
   <br><br>  
-  <h1>Search with Suggestions Example</h1>
-  <input type="text" id="searchInput" placeholder="Search">
-  <ul id="suggestionList"></ul>
-  <br><br>
-  <input type="submit" value="Submit">
-  </form>
+
 
   <script src="script.js"></script>
 </body>
