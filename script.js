@@ -1,5 +1,13 @@
 const players = []
 
+const allPlayers = [
+  "Adam Catalin",
+  "Agache Bogdan",
+  "Agavriloaie Alexandru",
+  "Albu Mihai",
+  "Antochi Cipiran",
+"Apetroaei Cezar","Deloiu Florin", "Stativa Andrei","Fanaragiu Andrei"]
+
 async function fetchData() {
   try {
     const response = await fetch("jucatori.csv"); // Replace "jucatori.csv" with the path to your CSV file
@@ -130,26 +138,35 @@ function autocomplete(inp, arr) {
 
 
 async function initializeAutocomplete() {
-  const data = await fetchData();
+  //const data = await fetchData();
+  const data = allPlayers
   console.log(data)
   const input = document.getElementById("selectPlayer");
   autocomplete(input, data);
 }
 
-const table = document.getElementById("myTable");
+const table = document.getElementById("teams");
 let currentColumn = 0;
 let currentRow = 1;
 
-
-const team = new Map()
+const colors = [[],[],[],[]]
+const prezentPlayers = []
 
 function populateTable(value) {
   const cell = table.rows[currentRow].cells[currentColumn];
   cell.textContent = value;
 
-  
+  colors[currentColumn].push(value)
+  prezentPlayers.push(value)
+
   incrementPosition();
 }
+
+const team = new Map()
+team.set('grey',colors[0])
+team.set('orange',colors[1])
+team.set('green',colors[2])
+team.set('blue',colors[3])
 
 
 function incrementPosition() {

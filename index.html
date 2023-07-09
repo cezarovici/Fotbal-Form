@@ -18,9 +18,17 @@ body {
   display: inline-block;
 }
 
-table{
-  width: 90%;
+h3{
+  color: black;
+  padding:0 48%;
+  border: 1px solid;
 }
+
+table{
+  width: 100%;
+}
+
+table[class="match"] {width:100%}
 
 td {
   border: 1px solid transparent;
@@ -32,7 +40,6 @@ td {
   width: 25%;
   height: 40px;
 }
-
 
 .autocomplete-items {
   position: absolute;
@@ -104,12 +111,12 @@ td[id="green"]{
 
 
     <br><br>
-    <table id="myTable">
+    <table id="teams">
       <tr>
-        <th>Team1</th>
-        <th>Team2</th>
-        <th>Team3</th>
-        <th>Team4</th>
+        <th>Team Grey</th>
+        <th>Team Orange</th>
+        <th>Team Green</th>
+        <th>Team Blue</th>
       </tr>
       <tr> 
           <td id="grey" name="t1j1"></td>
@@ -149,8 +156,40 @@ td[id="green"]{
       </tr>
   </table>
 
-  <br><br>  
+<br><br>  
+<br><br>
+<br><br>
 
+  <div>
+  <h3>Match 1</h3>
+  <table class="match" id="match1">
+      <tr>
+          <th>Team Green</th>
+          <th>Score</th>
+          <th>Team Orange</th>
+      </tr>
+      <tr>
+          <td>            <input id="selectPlayer" type="text" name="myCountry" placeholder="Player Name">  
+</td>
+          <td></td>
+            <input id="selectPlayer" type="text" name="myCountry" placeholder="Player Name">
+      </div>
+      <td></td>
+      </tr>
+
+      <tr> 
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>      
+      <tr> 
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+
+  </table>
+  </div>
 
   <script src="script.js"></script>
 </body>
