@@ -20,9 +20,9 @@ body {
 
 h3{
   color: black;
-  padding:0 48%;
-  border: 1px solid;
-}
+  text-align: left;
+  font-size: 30px;
+  }
 
 table{
   width: 100%;
@@ -99,7 +99,7 @@ td[id="green"]{
 
      <br><br>
 
-     <h1>Players</h1>
+    <h1>Players</h1>
     <div class="autocomplete" style="width:300px;">
       <input id="selectPlayer" type="text" name="myCountry" placeholder="Player Name">
     </div>
@@ -160,7 +160,6 @@ td[id="green"]{
 <br><br>
 <br><br>
 
-  <div>
   <h3>Match 1</h3>
   <table class="match" id="match1">
       <tr>
@@ -169,27 +168,84 @@ td[id="green"]{
           <th>Team Orange</th>
       </tr>
       <tr>
-          <td>            <input id="selectPlayer" type="text" name="myCountry" placeholder="Player Name">  
-</td>
+          <td rowspan="3"> </td>
           <td></td>
-            <input id="selectPlayer" type="text" name="myCountry" placeholder="Player Name">
-      </div>
-      <td></td>
+          <td rowspan="3"> </td>
       </tr>
-
-      <tr> 
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>      
-      <tr> 
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-
   </table>
-  </div>
+
+  <h3>Match 2</h3>
+  <table class="match" id="match2">
+      <tr>
+          <th>Team Blue</th>
+          <th>Score</th>
+          <th>Team Grey</th>
+      </tr>
+      <tr>
+          <td rowspan="3"></td>
+          <td></td>
+          <td rowspan="3"> </td>
+      </tr>
+  </table>
+
+  <h3>Match 3</h3>
+  <table class="match" id="match3">
+      <tr>
+          <th>Team Orange</th>
+          <th>Score</th>
+          <th>Team Blue</th>
+      </tr>
+      <tr>
+          <td rowspan="3"> </td>
+          <td></td>
+          <td rowspan="3"> </td>
+      </tr>
+  </table>
+
+
+  <h3>Match 4</h3>
+  <table class="match" id="match4">
+      <tr>
+          <th>Team Grey</th>
+          <th>Score</th>
+          <th>Team Green</th>
+      </tr>
+      <tr>
+          <td rowspan="3"> </td>
+          <td></td>
+          <td rowspan="3"> </td>
+      </tr>
+  </table>
+
+
+  <h3>Match 5</h3>
+  <table class="match" id="match5">
+      <tr>
+          <th>Team Green</th>
+          <th>Score</th>
+          <th>Team Blue</th>
+      </tr>
+      <tr>
+          <td rowspan="3"> </td>
+          <td></td>
+          <td rowspan="3"> </td>
+      </tr>
+  </table>
+
+  <h3>Match 6</h3>
+  <table class="match" id="match6">
+      <tr>
+          <th>Team Green</th>
+          <th>Score</th>
+          <th>Team Grey</th>
+      </tr>
+      <tr>
+          <td rowspan="3"> </td>
+          <td></td>
+          <td rowspan="3"> </td>
+      </tr>
+  </table>
+
 
   <script src="script.js"></script>
 </body>
