@@ -139,14 +139,14 @@ function autocomplete(inp, arr) {
 
 async function initializeAutocomplete() {
   //const data = await fetchData();
-  const data = allPlayers
+  const data = await fetchData()
   console.log(data)
   const input = document.getElementById("selectPlayer");
   autocomplete(input, data);
 }
 
 const table = document.getElementById("teams");
-let currentColumn = 0;
+let currentColumn = 0;  
 let currentRow = 1;
 
 const colors = [[],[],[],[]]
